@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+      
+        android:layout_weight="0.12"
+        android:gravity="center"
+        android:text="TextView" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+         android:layout_weight="0.12"
+        android:columnCount="5"
+        android:paddingTop="10dp"
+        android:rowCount="5"
+        android:rowOrderPreserved="true" >
+
+    </GridLayout>
+    
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text ="" />
+
+</LinearLayout>
