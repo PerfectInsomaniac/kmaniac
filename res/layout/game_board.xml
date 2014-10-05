@@ -1,7 +1,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="#000000">
 
     <TextView
         android:id="@+id/textView1"
@@ -10,9 +11,10 @@
       
         android:layout_weight="0.12"
         android:gravity="center"
-        android:text="TextView" />
+         />
 
-    <GridLayout
+    <GridView
+         android:id="@+id/gridView1"
         android:layout_width="match_parent"
         android:layout_height="300dp"
          android:layout_weight="0.12"
@@ -21,12 +23,14 @@
         android:rowCount="5"
         android:rowOrderPreserved="true" >
 
-    </GridLayout>
-    
+    </GridView>
+
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="304dp"
         android:layout_height="60dp"
-        android:text ="" />
+        android:layout_gravity="center"
+        android:background="#E41B17" 
+        android:onClick="checkAns"/>
 
 </LinearLayout>

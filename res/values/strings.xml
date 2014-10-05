@@ -4,9 +4,16 @@
     <string name="app_name">kmaniac</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="quit">Afraid . Wanna Leave ?</string>
+    <string name="quit">Afraid . Want to Leave ?</string>
     <string name="quit_yes">Yes</string>
     <string name="quit_no">No</string>
     <string name="quit_title">Exiting</string>
+    <string name="easy">Easy</string>
+    <string name="hard">Hard</string>
+    <string name="howtoplay">How To Play</string>
+    <string name="credits">Credits</string>
+    <string name="kmaniac">K-Maniac</string>
+      <string name="copyright">Mobile Development Group</string>
+     
 
 </resources>
