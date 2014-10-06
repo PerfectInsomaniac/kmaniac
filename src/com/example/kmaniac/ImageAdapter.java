@@ -28,11 +28,11 @@ public class ImageAdapter extends BaseAdapter {
     
     public Integer[] mThumbIds = {
     		
-    		 		R.drawable.eight, R.drawable.eight, R.drawable.eight,R.drawable.eight,R.drawable.ns,
-    		 		R.drawable.eight, R.drawable.eight, R.drawable.eight,R.drawable.eight,R.drawable.zero,
-    	        		R.drawable.eight, R.drawable.eight, R.drawable.eight,R.drawable.eight,R.drawable.zero, 
-    	        				R.drawable.eight, R.drawable.eight, R.drawable.eight,R.drawable.eight,R.drawable.zero, 
-    	        				R.drawable.eight, R.drawable.eight, R.drawable.eight,R.drawable.eight,R.drawable.zero,
+    		 		R.drawable.zero, R.drawable.one, R.drawable.two,R.drawable.three,R.drawable.four,
+    		 		R.drawable.five, obj[1][1], obj[1][2],obj[1][3],obj[1][4],
+    	        		R.drawable.six, obj[2][1], obj[2][2],obj[2][3],obj[2][4],
+    	        				R.drawable.seven,  obj[3][1], obj[3][2],obj[3][3],obj[3][4],
+    	        				R.drawable.eight,  obj[4][1], obj[4][2],obj[4][3],obj[4][4],
     };
 
 	@Override
