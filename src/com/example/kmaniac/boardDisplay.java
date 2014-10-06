@@ -6,6 +6,7 @@ import android.app.Activity;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -35,7 +36,7 @@ public class boardDisplay  extends Activity {
 	 int no_of_levels=0;
 	 int no_of_selected=0;
 	 int shape;
-	 public Integer[][] board = new Integer[5][5];
+	 public int[][] board = new int[5][5];
 	  int[][] temp_board = new int[4][4];
 	 
 	  
@@ -67,6 +68,7 @@ public class boardDisplay  extends Activity {
         	        	if(no_of_selected<2)
         	        	{imageView.setImageResource(R.drawable.s);
         	        	no_of_selected++;
+        	        	Log.v(null, ""+no_of_selected);
         	        	}
         	        	
         	    		}
@@ -186,7 +188,7 @@ public class boardDisplay  extends Activity {
 		   
 		   }
 		   
-		   gridView.setAdapter(new ImageAdapter(this,new boardDisplay()));
+		   gridView.setAdapter(new ImageAdapter(this,this));
 	}
 	  
 	   
