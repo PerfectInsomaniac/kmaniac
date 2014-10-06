@@ -36,7 +36,7 @@ public class boardDisplay  extends Activity {
 	 int no_of_levels=0;
 	 int no_of_selected=0;
 	 int shape;
-	 public int[][] board = new int[5][5];
+	 public Integer[][] board = new Integer[5][5];
 	  int[][] temp_board = new int[4][4];
 	 
 	  
@@ -52,6 +52,13 @@ public class boardDisplay  extends Activity {
         gridView = (GridView)findViewById(R.id.gridView1);
         tv1 = (TextView)findViewById(R.id.textView1);
         b1= (Button)findViewById(R.id.button1); 
+        
+        for(int i=0;i<5;i++)
+        	for(int j=0;j<5;j++)
+       board[i][j]=R.drawable.s;
+       
+        
+        
          gridView.setOnItemClickListener(new OnItemClickListener() {
         	    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
         	    	ImageView imageView = (ImageView) v;

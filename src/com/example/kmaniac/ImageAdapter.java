@@ -3,30 +3,34 @@ package com.example.kmaniac;
 
 import android.content.Context;
 
-
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
-
 import android.widget.ImageView;
  
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
-   private  int [][]obj = new int[5][5];
- 
+   private  Integer [][]obj ;
+  
+
     // Keep all Images in array
     
    
     // Constructor
-    public ImageAdapter(Context c,boardDisplay b){
+    public ImageAdapter(Context c,boardDisplay abc){
         mContext = c;
-        this.obj= b.board;
+        this.obj= abc.board;
+       
+        
     }
  
   
     
-    public Integer[] mThumbIds = {
+   
+
+
+	public Integer[] mThumbIds = {
     		
     		 		R.drawable.zero, R.drawable.one, R.drawable.two,R.drawable.three,R.drawable.four,
     		 		R.drawable.five, obj[1][1], obj[1][2],obj[1][3],obj[1][4],
