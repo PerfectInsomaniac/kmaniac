@@ -1,32 +1,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" 
-    android:background="#000000">
+    android:background="#000000"
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-      android:background="#780145"
-      
-        android:gravity="center"
-        
-         />
+        android:background="#780145"
+        android:gravity="center" />
 
     <GridView
-         android:id="@+id/gridView1"
+        android:id="@+id/gridView1"
+        android:layout_width="fill_parent"
+        android:layout_height="330dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:columnWidth="60dp"
+        android:gravity="center"
         android:numColumns="auto_fit"
-    android:gravity="center"
-    android:columnWidth="60dp"
-    android:stretchMode="columnWidth"
-    android:layout_width="fill_parent"
-    android:layout_height="330dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp"
-  android:layout_marginTop="50dp"
-    >
-
+        android:stretchMode="columnWidth" >
     </GridView>
 
     <Button

@@ -11,50 +11,50 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-
 public class InitialPage extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
-                                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+				WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 		setContentView(R.layout.activity_initial_page);
-		
+
 	}
-	
+
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-	    //Handle the back button
-	    if(keyCode == KeyEvent.KEYCODE_BACK) {
-	        //Ask the user if they want to quit
-	        new AlertDialog.Builder(this)
-	        
-	        .setTitle(R.string.quit_title)
-	        .setMessage(R.string.quit)
-	        .setPositiveButton(R.string.quit_yes, new DialogInterface.OnClickListener() {
+		// Handle the back button
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			// Ask the user if they want to quit
+			new AlertDialog.Builder(this)
 
-	            @Override
-	            public void onClick(DialogInterface dialog, int which) {
+					.setTitle(R.string.quit_title)
+					.setMessage(R.string.quit)
+					.setPositiveButton(R.string.quit_yes,
+							new DialogInterface.OnClickListener() {
 
-	                //Stop the activity
-	            	android.os.Process.killProcess(android.os.Process.myPid());
-                    System.exit(1); 
-	            }
+								@Override
+								public void onClick(DialogInterface dialog,
+										int which) {
 
-	        })
-	        .setNegativeButton(R.string.quit_no, null)
-	        .show();
+									// Stop the activity
+									android.os.Process
+											.killProcess(android.os.Process
+													.myPid());
+									System.exit(1);
+								}
 
-	        return true;
-	    }
-	    else {
-	        return super.onKeyDown(keyCode, event);
-	    }
-	    }
+							}).setNegativeButton(R.string.quit_no, null).show();
+
+			return true;
+		} else {
+			return super.onKeyDown(keyCode, event);
+		}
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -62,88 +62,74 @@ public class InitialPage extends Activity {
 		getMenuInflater().inflate(R.menu.initial_page, menu);
 		return true;
 	}
-	
-	
-	public void showBoard(View v)
-	{
-		Thread display = new Thread(){
-			public void run()
-			{
-				try{
+
+	public void showBoard(View v) {
+		Thread display = new Thread() {
+			public void run() {
+				try {
 					sleep(1000);
-					}
-				catch (InterruptedException e)
-				{
+				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				
-				finally
-				{
-					Intent openBoardPage= new Intent("com.example.kmaniac.boardDisplay");
+
+				finally {
+					Intent openBoardPage = new Intent(
+							"com.example.kmaniac.boardDisplay");
 					startActivity(openBoardPage);
-					
-				}	
-				
+
+				}
+
 			}
-			
+
 		};
 		display.start();
-		
+
 	}
-	
-	public void showcredits(View v)
-	{
-		Thread display = new Thread(){
-			public void run()
-			{
-				try{
+
+	public void showcredits(View v) {
+		Thread display = new Thread() {
+			public void run() {
+				try {
 					sleep(500);
-					}
-				catch (InterruptedException e)
-				{
+				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				
-				finally
-				{
-					Intent openBoardPage= new Intent("com.example.kmaniac.credit");
+
+				finally {
+					Intent openBoardPage = new Intent(
+							"com.example.kmaniac.credit");
 					startActivity(openBoardPage);
-					
-				}	
-				
+
+				}
+
 			}
-			
+
 		};
 		display.start();
-		
+
 	}
-	
-	public void showhow(View v)
-	{
-		Thread display = new Thread(){
-			public void run()
-			{
-				try{
+
+	public void showhow(View v) {
+		Thread display = new Thread() {
+			public void run() {
+				try {
 					sleep(500);
-					}
-				catch (InterruptedException e)
-				{
+				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				
-				finally
-				{
-					Intent openBoardPage= new Intent("com.example.kmaniac.howtoplay");
+
+				finally {
+					Intent openBoardPage = new Intent(
+							"com.example.kmaniac.howtoplay");
 					startActivity(openBoardPage);
-					
-				}	
-				
+
+				}
+
 			}
-			
+
 		};
 		display.start();
-		
+
 	}
-	
 
 }

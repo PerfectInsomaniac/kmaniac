@@ -3,12 +3,11 @@
     android:layout_height="fill_parent"
     android:layout_gravity="center"
     android:background="@drawable/menu" >
-    
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="47dp"
-       
         android:gravity="center"
         android:text="@string/kmaniac"
         android:textColor="#FFFFFF"
@@ -22,68 +21,64 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:textColor="#E41B17"
         android:layout_marginTop="60dp"
-       
-      android:textSize="25sp"
-        android:textStyle="italic"
-        android:text="@string/easy"
-       android:background="@drawable/shape"
-       android:onClick="showBoard"/>
-    
-     <Button
-         android:id="@+id/button2"
-         android:layout_width="250dp"
-         android:layout_height="wrap_content"
-         android:layout_below="@+id/textView1"
-         android:textColor="#E41B17"
-         android:layout_centerHorizontal="true"
-         android:layout_marginTop="120dp"
-           android:textSize="25sp"
-        android:textStyle="italic"
-        
-         android:text="@string/hard" 
-        android:background="@drawable/shape"/>
-     
-      <Button
-          android:id="@+id/button3"
-          android:layout_width="250dp"
-          android:layout_height="wrap_content"
-          android:layout_below="@+id/textView1"
-          android:layout_centerHorizontal="true"
-          android:textColor="#E41B17"
-          android:layout_marginTop="180dp"
-            android:textSize="25sp"
-        android:textStyle="italic"
         android:background="@drawable/shape"
-        
-          android:text="@string/howtoplay"
-           android:onClick="showhow" />
-      
-       <Button
-           android:id="@+id/button4"
-           android:layout_width="250dp"
-           android:layout_height="wrap_content"
-           android:layout_below="@+id/textView1"
-           android:layout_centerHorizontal="true"
-           android:textColor="#E41B17"
-           android:layout_marginTop="240dp"
-             android:textSize="25sp"
-        android:textStyle="italic"
-         
-           android:background="@drawable/shape"
-           android:text="@string/credits" 
-            android:onClick="showcredits"/>
+        android:onClick="showBoard"
+        android:text="@string/easy"
+        android:textColor="#E41B17"
+        android:textSize="25sp"
+        android:textStyle="italic" />
 
-       <TextView
-           android:id="@+id/textView2"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_alignLeft="@+id/button4"
-           android:layout_alignRight="@+id/button4"
-           android:layout_below="@+id/button4"
-           android:layout_marginTop="51dp"
-           android:gravity="center"
-           android:text="@string/copyright" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/shape"
+        android:text="@string/hard"
+        android:textColor="#E41B17"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/shape"
+        android:onClick="showhow"
+        android:text="@string/howtoplay"
+        android:textColor="#E41B17"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/shape"
+        android:onClick="showcredits"
+        android:text="@string/credits"
+        android:textColor="#E41B17"
+        android:textSize="25sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button4"
+        android:layout_alignRight="@+id/button4"
+        android:layout_below="@+id/button4"
+        android:layout_marginTop="51dp"
+        android:gravity="center"
+        android:text="@string/copyright" />
 
 </RelativeLayout>
