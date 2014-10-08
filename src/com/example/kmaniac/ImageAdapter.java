@@ -9,6 +9,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 public class ImageAdapter extends BaseAdapter {
+
 	private Context mContext;
 	private Integer[][] obj;
 	public Integer[] mThumbIds= new Integer [25];
@@ -49,7 +50,21 @@ public class ImageAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 
 		ImageView imageView = new ImageView(mContext);
-		imageView.setImageResource(mThumbIds[position]);
+		
+		if(mThumbIds[position]==0)
+	    {imageView.setImageResource(R.drawable.noimage);
+	    imageView.setTag("NO_IMAGE");
+	    }
+		else
+		{
+			imageView.setImageResource(mThumbIds[position]);
+	        if(position<6||position==10||position==15||position==20)
+			imageView.setTag("NOT_TO_SELECT");
+	        else
+	        {
+	        imageView.setTag("NOT_SELECTED");	
+	        }
+		}
 		imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
 
 		imageView.setLayoutParams(new GridView.LayoutParams(70, 70));

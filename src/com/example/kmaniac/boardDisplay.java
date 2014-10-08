@@ -1,9 +1,7 @@
 package com.example.kmaniac;
 
 import java.util.Random;
-
 import android.app.Activity;
-
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -29,7 +27,7 @@ public class boardDisplay extends Activity {
 	int shape;
 	public Integer[][] board = new Integer[5][5];
 	int[][] temp_board = new int[4][4];
-
+   
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -50,16 +48,24 @@ public class boardDisplay extends Activity {
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {
 				ImageView imageView = (ImageView) v;
-
-				if (v.getResources().equals(R.drawable.s)) {
-
+              
+				if (imageView.getTag().equals("SELECTED"))
+ {
+					Log.v(null, "b");
 					imageView.setImageResource(R.drawable.ns);
+					imageView.setTag("NOT_SELECTED");
+					
 					no_of_selected--;
-				} else if (v.getResources().equals(R.drawable.ns)) {
+				}
+				else if(imageView.getTag().equals("NOT_SELECTED"))
+				{
+					
 					if (no_of_selected < 2) {
+						
 						imageView.setImageResource(R.drawable.s);
+						imageView.setTag("SELECTED");
 						no_of_selected++;
-						Log.v(null, "" + no_of_selected);
+						
 					}
 
 				}
@@ -151,7 +157,7 @@ public class boardDisplay extends Activity {
 					board[i][j] = R.drawable.ns;
 
 				} else {
-					board[i][j] = R.drawable.noimage;
+					board[i][j] = 0;
 				}
 
 			}
