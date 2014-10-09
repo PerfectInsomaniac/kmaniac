@@ -67,7 +67,7 @@ public class InitialPage extends Activity {
 		Thread display = new Thread() {
 			public void run() {
 				try {
-					sleep(1000);
+					sleep(1);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
