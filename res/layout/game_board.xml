@@ -8,8 +8,11 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:background="#780145"
-        android:gravity="center" />
+        android:background="#000000"
+        android:gravity="center"
+        android:textColor="#E41B17"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <GridView
         android:id="@+id/gridView1"
@@ -21,7 +24,9 @@
         android:columnWidth="60dp"
         android:gravity="center"
         android:numColumns="auto_fit"
-        android:stretchMode="columnWidth" >
+        android:stretchMode="columnWidth" 
+        android:verticalSpacing="15dp"
+        >
     </GridView>
 
     <Button

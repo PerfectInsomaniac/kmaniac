@@ -5,7 +5,8 @@ import java.util.Random;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
+
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,6 +20,8 @@ import android.widget.Toast;
 
 public class boardDisplay extends Activity {
 
+	
+
 	CountDownTimer myCountDownTimerObject;
 	TextView tv1;
 	Button b1;
@@ -28,7 +31,7 @@ public class boardDisplay extends Activity {
 	int shape;
 	public Integer[][] board = new Integer[5][5];
 	int[][] temp_board = new int[4][4];
-   
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
@@ -49,24 +52,21 @@ public class boardDisplay extends Activity {
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {
 				ImageView imageView = (ImageView) v;
-				Log.v(null, ""+imageView.getTag());
-				if (imageView.getTag().equals("SELECTED"))
- {
-					Log.v(null, "b");
+
+				if (imageView.getTag().equals("SELECTED")) {
+
 					imageView.setImageResource(R.drawable.ns);
 					imageView.setTag("NOT_SELECTED");
-					
+
 					no_of_selected--;
-				}
-				else if(imageView.getTag().equals("NOT_SELECTED"))
-				{
-					
+				} else if (imageView.getTag().equals("NOT_SELECTED")) {
+
 					if (no_of_selected < 2) {
-						
+
 						imageView.setImageResource(R.drawable.s);
 						imageView.setTag("SELECTED");
 						no_of_selected++;
-						
+
 					}
 
 				}
@@ -76,6 +76,14 @@ public class boardDisplay extends Activity {
 
 		displayPage();
 	}
+	
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		myCountDownTimerObject.cancel();
+		return super.onKeyDown(keyCode, event);
+	}
+	
 
 	void prepareArray(int a) {
 		Random r = new Random();
@@ -88,10 +96,10 @@ public class boardDisplay extends Activity {
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
 				rand_number = r.nextInt(3);
-				if(rand_number>1)
-				temp_board[i][j] =1;
+				if (rand_number > 1)
+					temp_board[i][j] = 1;
 				else
-					temp_board[i][j]=0;
+					temp_board[i][j] = 0;
 			}
 		}
 
@@ -116,7 +124,7 @@ public class boardDisplay extends Activity {
 				temp_board[x][coord_random] = temp_board[x + 1][coord_random] = 1;
 			}
 			break;
-		case 3:
+		case 2:
 			if (r.nextInt(4) % 2 == 0) {
 				x = 1;
 				temp_board[coord_random][x] = temp_board[coord_random][x + 1] = 1;
@@ -126,7 +134,7 @@ public class boardDisplay extends Activity {
 				temp_board[coord_random][x] = temp_board[coord_random][0] = 1;
 			}
 			break;
-		case 4:
+		case 3:
 			if (r.nextInt(4) % 2 == 0) {
 				x = 0;
 				temp_board[coord_random][x] = temp_board[coord_random][x + 1] = 1;
@@ -141,7 +149,7 @@ public class boardDisplay extends Activity {
 	}
 
 	public void prepareBoard(int a) {
-		gridView = (GridView) findViewById(R.id.gridView1);
+
 		prepareArray(a);
 
 		board[0][0] = R.drawable.zero;
@@ -198,7 +206,7 @@ public class boardDisplay extends Activity {
 
 		prepareBoard(rand_number);
 		myCountDownTimerObject = new CountDownTimer(
-				20000 - 2000 * no_of_levels, 1000) {
+				20000 - 1000 * no_of_levels, 1000) {
 
 			public void onTick(long millisUntilFinished) {
 				tv1.setText("" + (int) (millisUntilFinished / 1000));
@@ -238,8 +246,9 @@ public class boardDisplay extends Activity {
 				resultTempArray[j++] = 1;
 			else if (imageView.getTag().equals("NOT_SELECTED"))
 				resultTempArray[j++] = 0;
-			else if(imageView.getTag().equals("NO_IMAGE"))
-			{resultTempArray[j++] = 0;}
+			else if (imageView.getTag().equals("NO_IMAGE")) {
+				resultTempArray[j++] = 0;
+			}
 		}
 
 		j = 0;
@@ -248,38 +257,18 @@ public class boardDisplay extends Activity {
 				resultArray[k][m] = resultTempArray[j++];
 
 			}
-		
-		Log.v(null, ""+resultArray[0][0]);
-		Log.v(null, ""+resultArray[0][1]);
-		Log.v(null, ""+resultArray[0][2]);
-		Log.v(null, ""+resultArray[0][3]);
-		Log.v(null, ""+resultArray[1][0]);
-		Log.v(null, ""+resultArray[1][1]);
-		Log.v(null, ""+resultArray[1][2]);
-		Log.v(null, ""+resultArray[1][3]);
-		Log.v(null, ""+resultArray[2][0]);
-		Log.v(null, ""+resultArray[2][1]);
-		Log.v(null, ""+resultArray[2][2]);
-		Log.v(null, ""+resultArray[2][3]);
-		Log.v(null, ""+resultArray[3][0]);
-		Log.v(null, ""+resultArray[3][1]);
-		Log.v(null, ""+resultArray[3][2]);
-		Log.v(null, ""+resultArray[3][3]);
-		
-		
-		
-		switch (shape)
-		{
+
+		switch (shape) {
 		case 0:
 			for (int b = 0; b < 4; b++) {
 				if ((resultArray[1][b] == 1 && resultArray[2][b] == 1)
 						|| (resultArray[0][b] == 1 && resultArray[3][b] == 1)) {
 					result = true;
-					Log.v(null,"A");
+
 					break;
-					
+
 				}
-				Log.v(null,"A");
+
 			}
 			break;
 		case 1:
@@ -287,10 +276,10 @@ public class boardDisplay extends Activity {
 				if ((resultArray[2][b] == 1 && resultArray[3][b] == 1)
 						|| (resultArray[0][b] == 1 && resultArray[1][b] == 1)) {
 					result = true;
-					Log.v(null,"B");
+
 					break;
 				}
-				Log.v(null,"B");
+
 			}
 			break;
 		case 2:
@@ -298,10 +287,10 @@ public class boardDisplay extends Activity {
 				if ((resultArray[b][1] == 1 && resultArray[b][2] == 1)
 						|| (resultArray[b][0] == 1 && resultArray[b][3] == 1)) {
 					result = true;
-					
+
 					break;
 				}
-				Log.v(null,"C");
+
 			}
 			break;
 		case 3:
@@ -309,25 +298,27 @@ public class boardDisplay extends Activity {
 				if ((resultArray[b][1] == 1 && resultArray[b][0] == 1)
 						|| (resultArray[b][2] == 1 && resultArray[b][3] == 1)) {
 					result = true;
-					Log.v(null,"D");
+
 					break;
 				}
-				Log.v(null,"D");
+
 			}
 			break;
 
 		}
 
 		if (result) {
+			myCountDownTimerObject.cancel();
 			no_of_levels++;
-			no_of_selected=0;
+			no_of_selected = 0;
 			displayPage();
 
-		} 
-		else {
+		} else {
+			myCountDownTimerObject.cancel();
+
 			Toast.makeText(getApplicationContext(),
-					" Just " + no_of_levels + " levels",
-					Toast.LENGTH_LONG).show();
+					" Just " + no_of_levels + " levels", Toast.LENGTH_LONG)
+					.show();
 			finish();
 		}
 
