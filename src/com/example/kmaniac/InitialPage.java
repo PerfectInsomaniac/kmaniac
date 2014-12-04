@@ -86,6 +86,30 @@ public class InitialPage extends Activity {
 
 	}
 
+	public void showFour(View v) {
+		Thread display = new Thread() {
+			public void run() {
+				try {
+					sleep(500);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+
+				finally {
+					Intent openBoardPage = new Intent(
+							"com.example.kmaniac.fourBoard");
+					startActivity(openBoardPage);
+
+				}
+
+			}
+
+		};
+		display.start();
+
+	}
+	
+	
 	public void showcredits(View v) {
 		Thread display = new Thread() {
 			public void run() {

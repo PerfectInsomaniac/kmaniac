@@ -44,10 +44,7 @@ public class boardDisplay extends Activity {
 		tv1 = (TextView) findViewById(R.id.textView1);
 		b1 = (Button) findViewById(R.id.button1);
 
-		for (int i = 0; i < 5; i++)
-			for (int j = 0; j < 5; j++)
-				board[i][j] = R.drawable.s;
-
+	
 		gridView.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View v,
 					int position, long id) {

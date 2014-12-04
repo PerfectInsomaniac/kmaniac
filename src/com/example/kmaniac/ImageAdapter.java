@@ -29,6 +29,18 @@ public class ImageAdapter extends BaseAdapter {
 		
 				
 	}
+	public ImageAdapter(Context c, fourBoard abc) {
+		mContext = c;
+		this.obj = abc.board;
+		for(int i=0,j=0;i<5;i++)
+		{
+			for(int k=0;k<5;k++)
+				mThumbIds[j++]=obj[i][k];
+		}
+	
+		
+				
+	}
 
 	
 
