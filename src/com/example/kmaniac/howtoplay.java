@@ -15,7 +15,8 @@ public class howtoplay extends Activity {
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-		setContentView(R.layout.howtoplay);
+		
+		setContentView(R.layout.howtoplay); // Image have the Instructions
 
 	}
 
