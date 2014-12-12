@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kmaniac"
+    package="com.sdsmdg.kmaniac"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.kmaniac.Splash"
+            android:name="com.sdsmdg.kmaniac.Splash"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,46 +23,46 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.kmaniac.InitialPage"
+            android:name="com.sdsmdg.kmaniac.InitialPage"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.example.kmaniac.InitialPage" />
+                <action android:name="com.sdsmdg.kmaniac.InitialPage" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.kmaniac.boardDisplay"
+            android:name="com.sdsmdg.kmaniac.boardDisplay"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.example.kmaniac.boardDisplay" />
+                <action android:name="com.sdsmdg.kmaniac.boardDisplay" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.kmaniac.fourBoardt"
+            android:name="com.sdsmdg.kmaniac.fourBoardt"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.example.kmaniac.fourBoard" />
+                <action android:name="com.sdsmdg.kmaniac.fourBoard" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.kmaniac.credit"
+            android:name="com.sdsmdg.kmaniac.credit"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.example.kmaniac.credit" />
+                <action android:name="com.sdsmdg.kmaniac.credit" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.kmaniac.howtoplay"
+            android:name="com.sdsmdg.kmaniac.howtoplay"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="com.example.kmaniac.howtoplay" />
+                <action android:name="com.sdsmdg.kmaniac.howtoplay" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

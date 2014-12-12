@@ -1,0 +1,19 @@
+﻿Revert "Reverted two commits and Ver 1 working"
+
+This reverts commit 52b8fe574dc6c47634928db8eccc0c771e54ec13.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   AndroidManifest.xml
+#	modified:   res/drawable-mdpi/credit.jpg
+#	modified:   res/layout/game_board.xml
+#	modified:   src/com/example/kmaniac/fourBoard.java
+#
+# Untracked files:
+#	src/com/sdsmdg/
+#
+
