@@ -304,10 +304,10 @@ public class fourBoard extends Activity{
 
 		switch (shape) {
 		case 0 :if(
-				(resultArray[0][0]==1 && resultArray[1][0]==1 && resultArray[2][0]==1 && resultArray[3][0]==1)||
-				(resultArray[0][1]==1 && resultArray[1][1]==1 && resultArray[2][1]==1 && resultArray[3][1]==1)||
-				(resultArray[0][2]==1 && resultArray[1][2]==1 && resultArray[2][2]==1 && resultArray[3][2]==1)||
-				(resultArray[0][3]==1 && resultArray[1][3]==1 && resultArray[2][3]==1 && resultArray[3][3]==1)
+				(temp_board[0][0]==1 && temp_board[1][0]==1 && temp_board[2][0]==1 && temp_board[3][0]==1)||
+				(temp_board[0][1]==1 && temp_board[1][1]==1 && temp_board[2][1]==1 && temp_board[3][1]==1)||
+				(temp_board[0][2]==1 && temp_board[1][2]==1 && temp_board[2][2]==1 && temp_board[3][2]==1)||
+				(temp_board[0][3]==1 && temp_board[1][3]==1 && temp_board[2][3]==1 && temp_board[3][3]==1)
 				)
 		       {
 			    result=true;
@@ -315,10 +315,10 @@ public class fourBoard extends Activity{
 		         break;
 		       
 		case 1 :if(
-				(resultArray[0][0]==1 && resultArray[0][3]==1 && resultArray[3][0]==1 && resultArray[3][3]==1)||
-				(resultArray[0][1]==1 && resultArray[0][2]==1 && resultArray[3][1]==1 && resultArray[3][2]==1)||
-				(resultArray[1][0]==1 && resultArray[2][0]==1 && resultArray[1][3]==1 && resultArray[2][3]==1)||
-				(resultArray[1][1]==1 && resultArray[2][1]==1 && resultArray[1][2]==1 && resultArray[2][2]==1)
+				(temp_board[0][0]==1 && temp_board[0][3]==1 && temp_board[3][0]==1 && temp_board[3][3]==1)||
+				(temp_board[0][1]==1 && temp_board[0][2]==1 && temp_board[3][1]==1 && temp_board[3][2]==1)||
+				(temp_board[1][0]==1 && temp_board[2][0]==1 && temp_board[1][3]==1 && temp_board[2][3]==1)||
+				(temp_board[1][1]==1 && temp_board[2][1]==1 && temp_board[1][2]==1 && temp_board[2][2]==1)
 				)   
 		        {
 			    result=true;
@@ -326,10 +326,10 @@ public class fourBoard extends Activity{
 		       break;
 		       
 		case 2:if(
-				(resultArray[0][0]==1 && resultArray[0][1]==1 && resultArray[3][0]==1 && resultArray[3][1]==1)||
-				(resultArray[0][2]==1 && resultArray[0][3]==1 && resultArray[3][2]==1 && resultArray[3][3]==1)||
-				(resultArray[1][0]==1 && resultArray[1][1]==1 && resultArray[2][0]==1 && resultArray[2][1]==1)||
-				(resultArray[1][2]==1 && resultArray[1][3]==1 && resultArray[2][2]==1 && resultArray[2][3]==1)
+				(temp_board[0][0]==1 && temp_board[0][1]==1 && temp_board[3][0]==1 && temp_board[3][1]==1)||
+				(temp_board[0][2]==1 && temp_board[0][3]==1 && temp_board[3][2]==1 && temp_board[3][3]==1)||
+				(temp_board[1][0]==1 && temp_board[1][1]==1 && temp_board[2][0]==1 && temp_board[2][1]==1)||
+				(temp_board[1][2]==1 && temp_board[1][3]==1 && temp_board[2][2]==1 && temp_board[2][3]==1)
 				)	
 		          {
 			result =true;
@@ -337,30 +337,30 @@ public class fourBoard extends Activity{
 		       break;
 		       
 		case 3: if(
-				(resultArray[0][0]==1 && resultArray[1][0]==1 && resultArray[0][3]==1 && resultArray[1][3]==1)||
-				(resultArray[0][1]==1 && resultArray[0][2]==1 && resultArray[1][1]==1 && resultArray[1][2]==1)||
-				(resultArray[2][0]==1 && resultArray[2][3]==1 && resultArray[3][0]==1 && resultArray[3][3]==1)||
-				(resultArray[2][1]==1 && resultArray[2][2]==1 && resultArray[3][1]==1 && resultArray[3][2]==1)
+				(temp_board[0][0]==1 && temp_board[1][0]==1 && temp_board[0][3]==1 && temp_board[1][3]==1)||
+				(temp_board[0][1]==1 && temp_board[0][2]==1 && temp_board[1][1]==1 && temp_board[1][2]==1)||
+				(temp_board[2][0]==1 && temp_board[2][3]==1 && temp_board[3][0]==1 && temp_board[3][3]==1)||
+				(temp_board[2][1]==1 && temp_board[2][2]==1 && temp_board[3][1]==1 && temp_board[3][2]==1)
 				)  
 		        {
 			   result = true;
 		        }
 		       break;
 		case 4:if(
-				(resultArray[0][0]==1 && resultArray[0][1]==1 && resultArray[1][0]==1 && resultArray[1][1]==1)||
-				(resultArray[0][2]==1 && resultArray[0][3]==1 && resultArray[1][2]==1 && resultArray[1][3]==1)||
-				(resultArray[2][0]==1 && resultArray[2][1]==1 && resultArray[3][0]==1 && resultArray[3][1]==1)||
-				(resultArray[2][2]==1 && resultArray[2][3]==1 && resultArray[3][2]==1 && resultArray[3][3]==1)
+				(temp_board[0][0]==1 && temp_board[0][1]==1 && temp_board[1][0]==1 && temp_board[1][1]==1)||
+				(temp_board[0][2]==1 && temp_board[0][3]==1 && temp_board[1][2]==1 && temp_board[1][3]==1)||
+				(temp_board[2][0]==1 && temp_board[2][1]==1 && temp_board[3][0]==1 && temp_board[3][1]==1)||
+				(temp_board[2][2]==1 && temp_board[2][3]==1 && temp_board[3][2]==1 && temp_board[3][3]==1)
 				)   
 		        {
 			     result = true;
 		        }
 		        break;
 		case 5 : if(
-				(resultArray[0][0]==1 && resultArray[0][1]==1 && resultArray[0][2]==1 && resultArray[0][3]==1)||
-				(resultArray[1][0]==1 && resultArray[1][1]==1 && resultArray[1][2]==1 && resultArray[1][3]==1)||
-				(resultArray[2][0]==1 && resultArray[2][1]==1 && resultArray[2][2]==1 && resultArray[2][3]==1)||
-				(resultArray[3][0]==1 && resultArray[3][1]==1 && resultArray[3][2]==1 && resultArray[3][3]==1)
+				(temp_board[0][0]==1 && temp_board[0][1]==1 && temp_board[0][2]==1 && temp_board[0][3]==1)||
+				(temp_board[1][0]==1 && temp_board[1][1]==1 && temp_board[1][2]==1 && temp_board[1][3]==1)||
+				(temp_board[2][0]==1 && temp_board[2][1]==1 && temp_board[2][2]==1 && temp_board[2][3]==1)||
+				(temp_board[3][0]==1 && temp_board[3][1]==1 && temp_board[3][2]==1 && temp_board[3][3]==1)
 				)	
 		        {
 			     result = true;			
