@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.sdslabs.kmaniac"
+    package="com.example.kmaniac"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.sdslabs.kmaniac.Splash"
+            android:name="com.example.kmaniac.Splash"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdslabs.kmaniac.InitialPage"
+            android:name="com.example.kmaniac.InitialPage"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.kmaniac.InitialPage" />
@@ -32,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdslabs.kmaniac.boardDisplay"
+            android:name="com.example.kmaniac.boardDisplay"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.kmaniac.boardDisplay" />
@@ -41,7 +41,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdslabs.kmaniac.fourBoardt"
+            android:name="com.example.kmaniac.fourBoardt"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.kmaniac.fourBoard" />
@@ -50,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdslabs.kmaniac.credit"
+            android:name="com.example.kmaniac.credit"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.kmaniac.credit" />
@@ -59,7 +59,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdslabs.kmaniac.howtoplay"
+            android:name="com.example.kmaniac.howtoplay"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.example.kmaniac.howtoplay" />
