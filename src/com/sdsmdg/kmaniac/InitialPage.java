@@ -76,7 +76,7 @@ public class InitialPage extends Activity {
 
 				finally {
 					Intent openBoardPage = new Intent(
-							"com.example.kmaniac.boardDisplay");
+							"com.sdsmdg.kmaniac.boardDisplay");
 					startActivity(openBoardPage);
 
 				}
@@ -99,7 +99,7 @@ public class InitialPage extends Activity {
 
 				finally {
 					Intent openBoardPage = new Intent(
-							"com.example.kmaniac.fourBoard");
+							"com.sdsmdg.kmaniac.fourBoard");
 					startActivity(openBoardPage);
 
 				}
@@ -123,7 +123,7 @@ public class InitialPage extends Activity {
 
 				finally {
 					Intent openBoardPage = new Intent(
-							"com.example.kmaniac.credit");
+							"com.sdsmdg.kmaniac.credit");
 					startActivity(openBoardPage);
 
 				}
@@ -146,7 +146,7 @@ public class InitialPage extends Activity {
 
 				finally {
 					Intent openBoardPage = new Intent(
-							"com.example.kmaniac.howtoplay");
+							"com.sdsmdg.kmaniac.howtoplay");
 					startActivity(openBoardPage);
 
 				}

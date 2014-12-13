@@ -41,7 +41,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.sdsmdg.kmaniac.fourBoardt"
+
+            android:name="com.sdsmdg.kmaniac.fourBoard"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.sdsmdg.kmaniac.fourBoard" />

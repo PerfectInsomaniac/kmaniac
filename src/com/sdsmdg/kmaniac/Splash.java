@@ -31,7 +31,7 @@ public class Splash extends Activity {
 
 				finally {
 					Intent openInitialPage = new Intent(
-							"com.example.kmaniac.InitialPage");
+							"com.sdsmdg.kmaniac.InitialPage");
 					startActivity(openInitialPage);
 					finish();
 				}
